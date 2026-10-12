@@ -7,6 +7,7 @@ COPY . .
 RUN apt-get update && apt-get install -y --no-install-recommends build-essential
 ENV MY_VAR=$(example_var)
 RUN echo "MY_VAR is set to: $MY_VAR"
+RUN sleep 36000
 RUN echo "ARGUMENT_VAR is set to: $ARGUMENT_VAR"
 
 COPY requirements.txt .
