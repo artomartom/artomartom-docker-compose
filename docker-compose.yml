@@ -25,6 +25,6 @@ services:
     image: alpine/openssl
     container_name: openssl
     restart: always
-    entrypoint: [ 'openssl', '-in', '"$SSL_CERT"', 'x509', '-text', '-noout']
+    entrypoint: [ 'openssl', 'x509', '-in', '"$SSL_CERT"',  '-text', '-noout']
     environment:
       SSL_CERT: ${SSL_CERT:-}
