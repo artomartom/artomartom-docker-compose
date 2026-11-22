@@ -25,6 +25,7 @@ services:
     image: alpine/openssl
     container_name: openssl
     restart: always
+    entrypoint: []
     command: echo $CERT | openssl x509 -text -noout
     environment:
       SSL_CERT: ${CERT:-}
